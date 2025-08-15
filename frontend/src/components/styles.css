@@ -1,6 +1,6 @@
 .input {
     display: flex;
-    width: 90%;
+    width: 95%;
     position: relative;
     align-items: center;
 }
@@ -43,4 +43,98 @@
 .input_btn:active {
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
+}
+
+.container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.todos {
+    display: flex;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(50, 195, 205);
+}
+
+.todos_heading{
+    font-size: 30px;
+    color: white;
+}
+
+.todos_signle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 25.5%; */
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    transition: 0.2s;
+    /* background fixes */
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230925/pngtree-soft-pastel-floral-design-light-blue-background-image_13319873.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: lightblue; 
+}
+
+.todos_signle:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+}
+.todo_signle--text:focus{
+    outline: none;
+
+}
+
+.icon{
+    margin-left:  10px;
+    font-size:  25px;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+@media(max-width: 1100px){
+    .todos{
+        width: 45%;
+    }
+}
+
+@media(max-width: 700px){
+    .input {
+        width: 95%;
+    }
+    .todos{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+    /* .todos_signle{
+        width: 100%;
+    } */
+     .container{
+        width: 95%;
+        flex-direction: column;
+     }
+}
+
+.remove{
+    background-color: rgb(235, 103, 80);
+}
+
+.dragcomplete{
+    background-color: rgb(235, 103, 236);
+}
+
+.dragactive{
+    background-color: rgb(235, 103, 0);
 }
